@@ -1,11 +1,16 @@
+:root{
+    --color-grey:#6E7886;
+}
+
 .cuerpo-completo{
     height: 500px;
     width: 800px;
     position: absolute;
+    background-color: #121921;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    
+    border-radius: 10px;
 }
 .container{
     display: grid;
@@ -13,7 +18,7 @@
     "a b b b"
     "a b b b"
     "a b b b"
-    "a c c c";
+    "c c c c";
 }
 div:nth-child(1) {
     grid-area: a;
@@ -40,8 +45,10 @@ body{
 }
 .flex-container{
     display: flex;
-    justify-content: space-evenly;
+    justify-content:space-evenly;
     align-items: center;
+    border: solid 0.5px;
+    border-color: transparent transparent var(--color-grey) transparent;
 }
 svg {
     margin: 8px;
@@ -54,9 +61,73 @@ a{
     text-decoration: none;
 }
 
-.container:hover {
-    cursor: pointer;
+.cuerpo-completo:hover {
+    cursor:pointer;
     background-color: rgba(255, 255, 255, 0.06);
     border-radius: 10px;
     transition-duration: .5s;
+}
+.pareja1{
+    display: flex;
+    align-items: center;
+}
+.pareja2{
+    display: flex;
+    align-items: center;
+}
+.pareja3{
+    display: flex;
+    align-items: center;
+}
+
+.compartir:hover{
+    svg{
+        fill: rgb(130,148,221);
+        background-color: rgb(130,148,221,0.4);
+        border-radius: 50%;
+        padding: 5px;
+        transition-duration: 0.5s;
+    }
+}
+
+.pareja1:hover{
+    svg{
+        fill: rgb(29, 161, 242);
+        background-color: rgb(29, 161, 242, 0.4);
+        border-radius: 50%;
+        padding: 5px;
+        transition-duration: 0.5s;
+    }
+    p{
+        color: rgb(29, 161, 242);
+        transition-duration: 0.5s;
+    }
+}
+
+.pareja2:hover{
+    svg{
+        fill: rgb(23, 191, 99);
+        background-color: rgb(23, 191, 99, 0.3);
+        border-radius: 50%;
+        padding: 5px;
+        transition-duration: 0.5s;
+    }
+    p{
+        color: rgb(23, 191, 99);
+        transition-duration: 0.5s;
+    }
+}
+
+.pareja3:hover{
+    svg{
+        fill: rgb(224, 36, 94);
+        background-color: rgb(224, 36, 94, 0.3);
+        border-radius: 50%;
+        padding: 5px;
+        transition-duration: 0.5s;
+    }
+    p{
+        color: rgb(224, 36, 94);
+        transition-duration: 0.5s;
+    }
 }
