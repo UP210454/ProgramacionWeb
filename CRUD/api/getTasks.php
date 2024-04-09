@@ -1,13 +1,13 @@
 <?php
 include './partials/connection.php';
 try{
-    $sql = "select t.id, firstname, title, completed from task t inner join `user` u on t.idUser=u.id;";
+    $sql = "select t.id, firstname, title, completed from task t inner join `user` u on t.idUser=u.id order by t.id asc;";
     $state = $conn->query($sql);
     $json = [];
     while($row = $state->fetch(PDO::FETCH_ASSOC)){
         array_push($json,[
             "id" => $row['id'],
-            "firtstname" => $row['firstname'],
+            "firstname" => $row['firstname'],
             "title" => $row['title'],
             "completed" => $row['completed']
         ]);

@@ -1,7 +1,7 @@
 <?php
 include './partials/connection.php';
 try{
-    $sql = "select * from `user`;";
+    $sql = "select * from `user` order by lastname, firstname asc;";
     $state = $conn->query($sql);
     $json = [];
     while($row = $state->fetch(PDO::FETCH_ASSOC)){
