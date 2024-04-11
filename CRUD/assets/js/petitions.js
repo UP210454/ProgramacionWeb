@@ -24,3 +24,26 @@ export async function createTask(data){
         return e;
     }
 }
+
+export async function deleteTask(fordata){
+    const resp = await fetch("/crud/api/deleteTask.php",{
+        method: 'POST',
+        body: fordata
+    });
+}
+
+export async function getTask(fordata){
+    const resp = await fetch("/crud/api/getTask.php",{
+        method : "POST",
+        body : fordata
+    });
+    const json = await resp.json();
+    return json;
+}
+
+export async function updateTask(fordata){
+    const resp = await fetch("/crud/api/updateTask.php",{
+        method : "POST",
+        body : fordata
+    });
+}
